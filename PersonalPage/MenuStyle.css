@@ -1,0 +1,35 @@
+table.MainMenu{
+	border-width: 0;
+	border-collapse: collapse;
+	font-family: Courier New;
+	font-size: calc(2 * (1vw + 1vh - 1vmin));
+	font-weight: bold;
+	color: white;
+	}
+
+	a.Mainmenu:link{text-decoration: none;color:white;}
+	a.Mainmenu:visited{text-decoration: none;color:white;}
+	a.Mainmenu:hover{text-decoration: none;color:#5FE8D3;}
+	a.Mainmenu:active{text-decoration: none;color:#58B8F5;}
+
+div.Contents{
+	border-collaspe: collaspe;
+	border-width: 2;
+	border-style: none none groove none;
+	border-color: gray;
+	font-family:Courier New;
+	font-size: calc(2 * (1vw + 1vh - 1vmin));
+	font-weight: :bold;
+	color:white;
+}
+
+li.Contents{
+	font-family: Courier New;
+	font-size: calc(3 * (1vw + 1vh - 1vmin));
+	font-weight: bold;
+	color: white;
+}
+
+
+	
+

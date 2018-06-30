@@ -1,0 +1,54 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../MenuStyle.css">
+<script language = "javascript">
+		function AboutMe(){
+			window.top.Menu.location.replace("../AboutMe/AboutMeMainMenu.html")
+			window.top.Main.location.replace("../AboutMe/AboutMe.html")
+		}
+
+		function DailyLife(){
+			window.top.Menu.location.replace("../DailyLife/DailyLifeMainMenu.html")
+			window.top.Main.location.replace("../DailyLife/DailyLife.html")
+		}
+
+		function Projects(){
+			window.top.Menu.location.replace("../Projects/ProjectsMainMenu.html")
+			window.top.Main.location.replace("../Projects/Projects.html")
+		}
+
+		function Feed(){
+			window.top.Menu.location.replace("FeedMainMenu.html")
+			window.top.Main.location.replace("Feed.html")
+		}
+
+		function Website(){
+			window.top.Menu.location.replace("../Website/WebsiteMainMenu.html")
+			window.top.Main.location.replace("../Website/Website.html")
+		}
+	</script>
+
+</head>
+<body bgcolor = "black">
+	<table class = MainMenu align = "left", border = 0, cellpadding="3",  width = 100% height = 100%>
+		<tr>
+			<td valign="middle" align = "center" width = 20%>
+				<a class = Mainmenu href="javascript:AboutMe()">About ME</a>
+				</td>
+			<td valign="middle" align = "center" width = 20%>
+				<a class = Mainmenu href="javascript:DailyLife()">Daily Life</a>
+			</td>
+			<td valign="middle" align = "center" width = 20%>
+				<a class = Mainmenu href="javascript:Projects()">Projects</a>
+			</td>
+			<td valign="middle" align = "center" width = 20%>
+				<a class = Mainmenu href="javascript:Feed()"><font color = "#58B8F5">Feed</font></a>
+			</td>
+			<td valign="middle" align = "center" width = 20%>
+				<a class = Mainmenu href="javascript:Website()">WebSite</a>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

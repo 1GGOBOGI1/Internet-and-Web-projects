@@ -1,0 +1,111 @@
+<html>
+<head>
+	<script language="javascript">
+		function hash(str){
+			var i = 0, H = 15487271
+			for(;i<str.length;i++){
+				H = (H * str.charCodeAt(i)) % 100155623
+			}
+			return String(H % 100000000)
+		}
+
+		function gotohome(){
+			window.location.href = "../../main.html";
+		}
+		
+		function information_check(){
+			if(document.information.pw.value==""){
+				alert("입력이 누락되었습니다.");
+				return false;
+			}
+			else if(document.information.rpw.value==""){
+				alert("입력이 누락되었습니다.");
+				return false;
+			}
+			else if(document.information.studentid.value==""){
+				alert("입력이 누락되었습니다.");
+				return false;
+			}
+			else{
+				if(document.information.pw.value==document.information.rpw.value){
+					document.information.enc.value=hash(document.information.pw.value);
+					return true;
+				}
+				else{
+					alert("비밀번호를 확인해 주세요.");
+					return false;
+				}
+			}
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<title>Sookmyung Mall</title>
+</head>
+<body>
+	<div class = parent>
+		<div class = top align="center">
+			<div class="main">
+				<table class=clear align = "left" height = 80%>
+				<tr>
+					<td class = topmenu><img src="../../image/symbole.png" onclick="gotohome()" height=40pt></td>
+					<td><font size = 5><b>숙명인 회원가입</b></font></td>
+				</tr>
+			</table>
+			</div>
+		</div>
+		<div style="width:100%;height:120pt;position:absolute;top:40pt;text-align:center;border-width:0.5pt;border-style:none none solid none;vertical-align: 	middle;background:#2060AA">
+			<div style="width:80%;height:80%; position:absolute;left:10%;top:10%;text-align:center;vertical-align:middle;">
+					<table class=clear align="center" width=100% height=100% border=0 style="vertical-align:middle;">
+				<tr>
+					<td align="center" valign="center" bgcolor=#2060AA>
+						<img src="../../image/signup_2_1.png" style="height:100pt;">
+					</td>
+					<td align="center" valign="center" bgcolor=#2060AA>
+						<img src="../../image/signup_2_2.png" style="height:100pt;">
+					</td>
+					<td align="center" valign="center" bgcolor=#2060AA>
+						<img src="../../image/signup_2_3.png" style="height:100pt;">
+					</td>
+					<td align="center" valign="center" bgcolor=white>
+						<img src="../../image/signup_1_4.png" style="height:100pt;">
+					</td>
+				</tr>
+			</table>
+			</div>
+		</div>
+		<div class="maincontent">
+			<div class="contentmain"><br>
+				<div style="width:100%; height:100pt; overflow:hidden;background:#2060AA;border-radius:20pt; text-align:center; vertical-align: middle;overflow:hidden;"><br>
+					<font color=white><font size = 5>눈송몰에서 사용할 회원 정보를 입력해 주세요!</font>
+					<font size = 4><br><br>개인정보는 안전하게 보관됩니다.</font></font>
+				</div>
+				<br><br>
+				<form method="post" name = "information" action = "signup_information.php">
+				<div style="width:100%;overflow:hidden;background:#2060AA;border-radius:20pt; text-align:center; vertical-align: middle;overflow:hidden;color:white;"><br>
+					<p align="left">
+					<table width=100%>
+						<tr>
+							<tr><td align="right" width=20%><font color=white size=4>아이디<br></font></td><td align="left"><input type="text" name="id"><font size = 3 color=white>&nbsp;(앞에서 입력한 아이디와동일해야함)</font></td></tr>
+							<tr><td><br><br></td></tr>
+							<td align="right" width=20%><font color=white size=4>이름 </font></td>
+							<td align="left">
+								<input type= "text" name = "Name">
+							</td>
+						</tr>
+						<tr><td><br><br></td></tr>
+						<tr><td align="right" width=20%><font color=white size=4>비밀번호 </font></td><td align="left"><input type="password" name="pw"></td></tr>
+						<tr><td align="right" width=20%><font color=white size=4>비밀번호 재입력</font></td><td align="left"><input type="password" name="rpw"><br></td></tr>
+						<tr><td><br></td></tr>
+						<tr><td align="right" width=20%><font color=white size=4>학번 </font></td><td align="left"><input type="text" name="studentid"><br></td></tr>
+						<tr><td><br></td></tr>
+					</table>
+				</p>
+				</div>
+					<input type="hidden" name="enc">
+					<p align="center"><input type = "submit" value = "다음" onclick="return information_check()" style="background: #2060AA;color:white; border-width: 0;font-size:25pt; text-align:center;"></p><br>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
